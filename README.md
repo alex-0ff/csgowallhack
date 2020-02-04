@@ -1,6 +1,6 @@
 # **CSGO WALLHACK/GLOW HACK/BUNNYHOP HACK**
-## Last update: `02/02/2020`
-
+## Last update: `04/2/2020`
+## updated within 24h
 ## **Instructions:**
 
     1. Install AutoHotkey and choose ANSI 32 bit
