@@ -1,6 +1,6 @@
 Instructions
 
-1. Install AutoHotkey and choose ANSI 32 bit
+1. Install AutoHotkey --> CUSTOM and choose ANSI 32 bit
 2. Open CS:GO
 3. Run the script
 4. Enjoy
