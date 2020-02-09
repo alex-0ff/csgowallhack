@@ -42,7 +42,8 @@ g := 1
 a := 1
 bToggle := 1
 bhoptoggle := 0
-fovvalue := 90
+/*fovvalue := 90
+*/
 glowtoggle := 0
 radar := 0
 IniRead, bToggle, Settings.INI, Settings, bToggle, 0
@@ -51,7 +52,9 @@ IniRead, r, Settings.INI, Settings, r, 1
 IniRead, b, Settings.INI, Settings, b, 0
 IniRead, g, Settings.INI, Settings, g, 1
 IniRead, bhoptoggle, Settings.INI, Settings, bhoptoggle, 0
+/*
 IniRead, fovvalue, Settings.INI, Settings, fovvalue, 90
+*/
 IniRead, glowtoggle, Settings.INI, Settings, glowtoggle, 0
 IniRead, radar, Settings.INI, Settings, radar, 0
 IniRead, LocalPlayer, Settings.INI, Offsets, LocalPlayer, 0xCBD6B4
@@ -61,13 +64,17 @@ IniRead, glowindexz, Settings.INI, Offsets, glowindexz, 0xA3F8
 IniRead, spotted, Settings.INI, Offsets, spotted, 0x93D
 IniRead, health, Settings.INI, Offsets, health, 0x100
 IniRead, team, Settings.INI, Offsets, team, 0xF4
-IniRead, fov, Settings.INI, Offsets, fov, 0x31E4
+/*
+    IniRead, fov, Settings.INI, Offsets, fov, 0x31E4
+*/
 IniRead, flags, Settings.INI, Offsets, flags, 0x104
 IniWrite, %LocalPlayer%, Settings.INI, Offsets, LocalPlayer
 IniWrite, %glowobjectmanger%, Settings.INI, Offsets, glowobjectmanger
 IniWrite, %entitylist%, Settings.INI, Offsets, entitylist
 IniWrite, %glowindexz%, Settings.INI, Offsets, glowindexz
+/*
 IniWrite, %fov%, Settings.INI, Offsets, fov
+*/
 IniWrite, %spotted%, Settings.INI, Offsets, spotted
 IniWrite, %health%, Settings.INI, Offsets, health
 IniWrite, %team%, Settings.INI, Offsets, team
@@ -106,7 +113,8 @@ sleep 20
 continue
 }
 glowobj :=ReadMemory(client+glowobjectmanger,PID,ProcessHandle)
-WriteMemoryUChar( localadress + fov, fovvalue, PID)
+/*WriteMemoryUChar( localadress + fov, fovvalue, PID)
+*/
 if (bhoptoggle){
 if (GetKeyState("Space", "P") ){
 player_flags:=ReadMemory(localadress + flags ,PID,ProcessHandle)
@@ -162,7 +170,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -189,7 +198,8 @@ GuiControl,,Text2,<bhop is on>
 }else{
 GuiControl,,Text2,<bhop is off>
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -216,7 +226,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,<Fov Value is %fovvalue%>
+/*GuiControl,,Text3,<Fov Value is %fovvalue%>
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -243,7 +254,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,<Glow is on>
 }else{
@@ -270,7 +282,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -297,7 +310,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -324,7 +338,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -351,7 +366,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -388,7 +404,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -415,7 +432,8 @@ GuiControl,,Text2,<bhop is on>
 }else{
 GuiControl,,Text2,<bhop is off>
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -442,7 +460,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,<Fov Value is %fovvalue%>
+/*GuiControl,,Text3,<Fov Value is %fovvalue%>
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -469,7 +488,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,<Glow is on>
 }else{
@@ -496,7 +516,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -523,7 +544,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -550,7 +572,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -577,7 +600,8 @@ GuiControl,,Text2,bhop is on
 }else{
 GuiControl,,Text2,bhop is off
 }
-GuiControl,,Text3,Fov Value is %fovvalue%
+/*GuiControl,,Text3,Fov Value is %fovvalue%
+*/
 if (glowtoggle){
 GuiControl,,Text4,Glow is on
 }else{
@@ -615,10 +639,12 @@ IniWrite, %bhoptoggle%, Settings.INI, Settings, bhoptoggle
 return
 }else if (page = 3)
 {
-fovvalue := fovvalue + 1
+/*fovvalue := fovvalue + 1
 GuiControl,,Text3,<Fov Value is %fovvalue%>
 IniWrite, %fovvalue%, Settings.INI, Settings, fovvalue
+*/
 return
+
 }else if (page = 4)
 {
 glowtoggle := 1
@@ -688,10 +714,13 @@ IniWrite, %bhoptoggle%, Settings.INI, Settings, bhoptoggle
 return
 }else if (page = 3)
 {
+    /*
 fovvalue := fovvalue - 1
 GuiControl,,Text3,<Fov Value is %fovvalue%>
 IniWrite, %fovvalue%, Settings.INI, Settings, fovvalue
+*/
 return
+
 }else if (page = 4)
 {
 glowtoggle := 0
