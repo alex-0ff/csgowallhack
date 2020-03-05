@@ -42,10 +42,9 @@ g := 1
 a := 1
 bToggle := 1
 bhoptoggle := 0
-/*fovvalue := 90
-*/
 glowtoggle := 0
 radar := 0
+
 IniRead, bToggle, Settings.INI, Settings, bToggle, 0
 IniRead, a, Settings.INI, Settings, a, 0.8
 IniRead, r, Settings.INI, Settings, r, 1
@@ -62,8 +61,8 @@ IniRead, glowindexz, Settings.INI, Offsets, glowindexz, 0xA3F8
 IniRead, spotted, Settings.INI, Offsets, spotted, 0x93D
 IniRead, health, Settings.INI, Offsets, health, 0x100
 IniRead, team, Settings.INI, Offsets, team, 0xF4
-
 IniRead, flags, Settings.INI, Offsets, flags, 0x104
+
 IniWrite, %LocalPlayer%, Settings.INI, Offsets, LocalPlayer
 IniWrite, %glowobjectmanger%, Settings.INI, Offsets, glowobjectmanger
 IniWrite, %entitylist%, Settings.INI, Offsets, entitylist
