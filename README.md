@@ -1,5 +1,5 @@
 # **CSGO WALLHACK/GLOW HACK/BUNNYHOP HACK**
-## Last update: `18/04/2020`
+## Last update: `26/01/2021`
 ## updated within 24h
 ## **Instructions for the .exe file
 
